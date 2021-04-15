@@ -4,17 +4,14 @@ exports.up = function (knex) {
             tbl.increments("step_ingredient_id");
             tbl.integer("recipe_id", 128)
                 .notNullable()
-
                 .references("recipe_id")
                 .inTable("recipes");
             tbl.integer("step_id", 128)
                 .notNullable()
-
                 .references("step_id")
                 .inTable("steps");
             tbl.integer("ingredient_id", 128)
                 .notNullable()
-
                 .references("ingredient_id")
                 .inTable("ingredients");
             tbl.integer("quantity", 128).notNullable();
